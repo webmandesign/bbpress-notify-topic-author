@@ -4,7 +4,7 @@
  * Plugin Name:        bbPress Notify Topic Author
  * Plugin URI:         https://github.com/webmandesign/bbpress-notify-topic-author
  * Description:        Sends notification email to topic author when a topic is created.
- * Version:            1.0.0
+ * Version:            1.0.1
  * Author:             WebMan Design - Oliver Juhas
  * Author URI:         https://www.webmandesign.eu
  * License:            GNU General Public License v3
@@ -89,7 +89,7 @@ class WM_bbP_Notify_Topic_Author {
 	 * Adapted from `bbp_notify_forum_subscribers()` function.
 	 *
 	 * @since    1.0.0
-	 * @version  1.0.0
+	 * @version  1.0.1
 	 *
 	 * @param  int     $topic_id
 	 * @param  int     $forum_id
@@ -126,7 +126,7 @@ class WM_bbP_Notify_Topic_Author {
 				|| empty( $args['subject'] )
 				|| ! is_email( $args['to'] )
 			) {
-				return fasle;
+				return false;
 			}
 
 
